@@ -1,0 +1,32 @@
+#/usr/bin/python
+
+import os
+
+class Engine:
+  def __init__(self):
+    #define constants
+    pOccupied = 'O'
+    pFree = 'F'
+    pProhibited = 'P'
+    global mGame
+
+    self.mGame = [
+    ['P', 'P', 'O', 'O', 'O', 'P', 'P'],
+    ['P', 'P', 'O', 'O', 'O', 'P', 'P'],
+    ['O', 'O', 'O', 'O', 'O', 'O', 'O'],
+    ['O', 'O', 'O', 'F', 'O', 'O', 'O'],
+    ['O', 'O', 'O', 'O', 'O', 'O', 'O'],
+    ['P', 'P', 'O', 'O', 'O', 'P', 'P'],
+    ['P', 'P', 'O', 'O', 'O', 'P', 'P']]
+
+  def __str__(self):
+    viewBoard = "Caca "
+    for rows in self.mGame:
+      for item in rows: 
+        viewBoard = viewBoard + item
+    
+    return viewBoard
+
+engine = Engine()
+
+print engine
